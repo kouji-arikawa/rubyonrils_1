@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body_top {
+  margin: 33px;
+}
+
+.top_header {
+  font-size: 18px;
+}
+
+.top_strong {
+  font-weight: bold;
+}
+
+.top_body {
+  margin: 33px;
+}
+
+.top_body2 {
+  margin-bottom: 33px;
+  padding-left: 33px;
+}
+
+.top_books {
+  margin-left: 33px;
+}
