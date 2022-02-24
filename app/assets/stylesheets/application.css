@@ -43,3 +43,21 @@
 .top_books {
   margin-left: 33px;
 }
+
+.index_header {
+  margin: 33px;
+}
+
+table {
+  margin: 33px;
+}
+
+.td {
+  display: table-cell;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.index_body {
+  margin: 33px;
+}
