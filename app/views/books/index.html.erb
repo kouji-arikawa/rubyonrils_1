@@ -3,10 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      
+      <th class="title">Title</th>
+      <th class="body">Body</th>
       <th></th>
+      <th></th>
+      <th
     </tr>
   </thead>
 　<tbody>
@@ -14,14 +15,14 @@
     <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-      <td><%= link_to 'Show', book %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) %></td>
-      <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', book,class:"index-show" %></td>
+      <td><%= link_to 'Edit', edit_book_path(book),class:"index-edit" %></td>
+      <td><%= link_to 'Destroy', book,class:"index-destroy", method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<h1>New book</h1>
+<h2>New book</h2>
 <%= form_with model: @book, url: '/books', method: :post  do |f| %>
   <p>Title</p>
   <%= f.text_field :title %>

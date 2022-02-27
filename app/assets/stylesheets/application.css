@@ -42,6 +42,22 @@
 
 .top_books {
   margin-left: 33px;
+  font-size: 13px;
+  text-decoration: none;
+  color: white ;
+}
+
+.top_books:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.top-bookers:hover {
+  color: #ffffff;
+}
+
+.top-bookers {
+  color: #808080;
 }
 
 .index_header {
@@ -49,15 +65,65 @@
 }
 
 table {
-  margin: 33px;
+  width: 742px;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  font-size: 13px;
 }
 
-.td {
-  display: table-cell;
+.title {
+  width: 192px;
   padding-bottom: 5px;
-  text-align: center;
+}
+
+.body {
+  width: 400px;
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 1px 5px 7px;
+  font-size: 13px;
+}
+
+.index-show:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.index-show {
+  color: #000000;
+}
+
+.index-edit:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.index-edit {
+  color: #000000;
+}
+
+.index-destroy:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.index-destroy {
+  color: #000000;
 }
 
 .index_body {
   margin: 33px;
+}
+
+body {
+  margin: 33px;
+}
+
+p {
+  font-size: 13px;
 }
