@@ -132,3 +132,16 @@ p {
   font-size: 13px;
   color: #008000;
 }
+
+.error {
+  width: 450px;
+  height: 123px;
+  margin: 33px;
+}
+
+.error_title {
+  width: 464px;
+  height: 28px;
+  color: #000000;
+  background-color: red;
+}

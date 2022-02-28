@@ -1,5 +1,13 @@
 <tbody>
 <h1>Editing Book</h1>
+<% if @books.errors.any? %>
+  <%= @books.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @books.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_with model: @books do |f| %>
 <p>title</p>
