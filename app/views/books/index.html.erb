@@ -1,12 +1,19 @@
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <h1>Books</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      
+      <th class="title">Title</th>
+      <th class="body">Body</th>
       <th></th>
+      <th></th>
+      <th
     </tr>
   </thead>
 　<tbody>
@@ -14,14 +21,25 @@
     <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-      <td><%= link_to 'Show', book %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) %></td>
-      <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', book,class:"index-show" %></td>
+      <td><%= link_to 'Edit', edit_book_path(book),class:"index-edit" %></td>
+      <td><%= link_to 'Destroy', book,class:"index-destroy", method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<h1>New book</h1>
+<h2>New book</h2>
+  <% if @book.errors.any? %>
+  <div id="error">
+    <div class="error_titl"><%= @book.errors.count %>errors prohibited this book from being saved:</div>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+
 <%= form_with model: @book, url: '/books', method: :post  do |f| %>
   <p>Title</p>
   <%= f.text_field :title %>
